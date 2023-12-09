@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+
+                username = 'mapbox'
+                password =  'sk.eyJ1IjoiZGVhcm92YSIsImEiOiJjbDdtM2Q5eHUxbzVwM3dzYXlsMmZiMTk4In0.OijWsXa8chg_VG1wBQaDXw'
+            }
+        }
+
+    }
+}
+
+rootProject.name = "Mdisujikelayakan"
+include ':app'

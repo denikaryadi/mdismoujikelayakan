@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Uji Kelayakan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyC3SrcUt_3iPERnX-hk46YYsKJiCTzJ5z0
+    </string>
+    <string name="tulisan_biru"><![CDATA[<b><font color=#0000FF>Hello world!</font></b>]]></string>
+    <string name="privacy_policy_url">http://dream-space.web.id/doc_privacy/privacy_policy.php?name=MaterialX</string>
+    <string name="banner_ad_unit_id">ad5572ab91494c88a86a9d8336f27e48</string>
+    <string name="interstitial_ad_unit_id">1d861c473550484aa7d5012f8b89f571</string>
+
+    <string name="step_of">Step %1$d of %2$d</string>
+    <string name="section_format">Section : %1$d</string>
+
+    <string name="about_text">The best android implementation of material UI components. This app implemented based on Google Design Guidelines.
+    </string>
+
+    <string name="version_unknown">Unknown</string>
+    <string name="app_version">V 1.0.0</string>
+    <string name="default_notification_channel_id">Default</string>
+    <string name="webview_loading">Load Content... </string>
+    <string name="komida">\u00A9Koperasi Mitra Dhuafa</string>
+    <string name="access_token">sk.eyJ1IjoiZGVhcm92YSIsImEiOiJjbDdtM2Q5eHUxbzVwM3dzYXlsMmZiMTk4In0.OijWsXa8chg_VG1wBQaDXw</string>
+    <string name="title_activity_input_data_anggota">InputDataAnggota</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

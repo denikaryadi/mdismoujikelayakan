@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormTambahIndexRumah"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/oval"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/green_400"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/toolbartambahanggotaindexrumah"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/hedco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/accent"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="0dp" />
+
+                        <ImageView
+                            android:id="@+id/fotodep"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/woman" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvnomoragtkeluarga"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:text="Masukan Data Index Rumah"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                        <ImageButton
+                            android:id="@+id/bt_toggle_detil"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:tint="@color/grey_60" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/etKodeUkAgt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/etKodeUkIdxRumah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+
+                            android:fontFamily="@font/poppins"
+                            android:text="Index Dinding"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <Spinner
+                            android:id="@+id/spinnerIndexDinding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/index_rumah_dinding"
+                            android:fontFamily="@font/poppins" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+
+                            android:fontFamily="@font/poppins"
+                            android:text="Index Atap"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <Spinner
+                            android:id="@+id/spinnerIndexAtap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/index_rumah_atap"
+                            android:fontFamily="@font/poppins" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+
+                            android:fontFamily="@font/poppins"
+                            android:text="Index Lantai"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <Spinner
+                            android:id="@+id/spinnerIndexLantai"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/index_rumah_lantai"
+                            android:fontFamily="@font/poppins" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Status Kepemilikan Rumah"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/rgStatusKepemilikan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_sendiri"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Sendiri"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_sewa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Sewa"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_ortu_lain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Rumah Orang Tua/Lainnya"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_simpandataindexrumah"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rect_green"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Simpan Data Index Rumah"
+                        android:textColor="@android:color/white" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="300dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

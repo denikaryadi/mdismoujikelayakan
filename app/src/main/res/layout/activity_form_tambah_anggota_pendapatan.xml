@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormTambahAnggotaPendapatan"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/oval"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/green_400"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/toolbartambahanggotapendapatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/hedco"
+                        android:layout_width="match_parent"
+                        android:background="@color/accent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="0dp" />
+
+                        <ImageView
+                            android:id="@+id/fotodep"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/cash_in"
+                            />
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:id="@+id/tv_kode_uk_agt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Masukan Pendapatan Anggota "
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+
+                        </LinearLayout>
+
+
+                        <ImageButton
+                            android:id="@+id/bt_toggle_detil"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:tint="@color/grey_60"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/etKodeUkAgt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/etKodeUkPendapatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPendapatanSuamiTetap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPendapatanSuamiTetap"
+                                android:hint="Pendapatan Suami Tetap"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPendapatanSuamiTidakTetap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPendapatanSuamiTidakTetap"
+                                android:hint="Pendapatan Suami Tidak Tetap"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="numberDecimal"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilTotalPendapatanSuamiPerBulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotalPendapatanSuamiPerBulan"
+                                android:hint="Total Pendapatan Suami per Bulan"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:enabled="false"
+                                android:inputType="none"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPendapatanIstriTetap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPendapatanIstriTetap"
+                                android:hint="Pendapatan Istri Tetap"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPendapatanIstriTidakTetap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPendapatanIstriTidakTetap"
+                                android:hint="Pendapatan Istri Tidak Tetap"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilTotalPendapatanIstriPerBulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotalPendapatanIstriPerBulan"
+                                android:hint="Total Pendapatan Istri per Bulan"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPendapatanLainnyaTetap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPendapatanLainnyaTetap"
+                                android:hint="Pendapatan Lainnya Tetap"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPendapatanLainnyaTidakTetap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPendapatanLainnyaTidakTetap"
+                                android:hint="Pendapatan Lainnya Tidak Tetap"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilTotalPendapatanLainnyaPerBulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotalPendapataLainnyaPerBulan"
+                                android:hint="Total Pendapatan Lainnya per Bulan"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                            android:id="@+id/tilTotalPendapatanSemuaPerBulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotalPendapatanSemuaPerBulan"
+                                android:hint="Total Pendapatan Semua Per Bulan"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPengeluaranRT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPengeluaranRT"
+                                android:hint="Pengeluaran RT"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilPengeluaranLainnya"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etPengeluaranLainnya"
+                                android:hint="Pengeluaran Lainnya"
+                                android:fontFamily="@font/poppins"
+                                android:inputType="number"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            android:id="@+id/tilTotalPengeluaranPerBulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotalPengeluaranPerBulan"
+                                android:hint="Total Pengeluaran per Bulan"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+                                android:enabled="false"
+                                android:inputType="none"
+                                android:singleLine="true"
+                                 />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="20dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:fontFamily="@font/poppins"
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                            android:id="@+id/tilTotalPendapatanBersih"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotalPendapatanBersih"
+                                android:hint="Total Pendapatan Bersih"
+                                android:fontFamily="@font/poppins"
+                                android:textStyle="bold"
+
+                                android:inputType="none"
+                                android:enabled="false"
+                                android:singleLine="true"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_simpananggotapendapatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rect_green"
+                        android:fontFamily="@font/poppins"
+                        android:text="Simpan Data Pendapatan"
+                        android:textColor="@android:color/white"
+                        android:gravity="center" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="300dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

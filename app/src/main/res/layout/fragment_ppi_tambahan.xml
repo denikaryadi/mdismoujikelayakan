@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parentLayout"
+    tools:context=".PpiTambahanFragment"
+    android:orientation="vertical">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="10dp"
+        >
+        <View
+            android:layout_width="@dimen/spacing_middle"
+            android:layout_height="0dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+            <TextView
+                android:id="@+id/kode_uk_keluarga_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+            <TextView
+                android:id="@+id/nik_ktp_keluarga_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/nama_anggota_keluarga_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/kelompok_keluarga_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/center_keluarga_tv"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:background="@color/blue_100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_large">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_fact_check"
+                        app:tint="@color/accent" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_jml_pr"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_jml_pr_sekolah"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_jml_lk"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_jml_lk_sekolah"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_jml_total"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_jml_total_sekolah"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_pg_answer"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15dp"
+                        android:visibility="visible"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_id_jawaban"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:text=""
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_id_soal"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:scrollbars="vertical"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|fill_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_large"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical"
+                android:scrollbars="horizontal"> <!-- Menambahkan scrollbars="vertical" di sini -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewFormPPITambahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:scrollingCache="true" />
+
+
+
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@+id/loadingProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_simpandatappitambahan"
+                android:background="@color/blue_400"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simpan Data PPI Tambahan"
+                android:layout_alignParentBottom="true" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

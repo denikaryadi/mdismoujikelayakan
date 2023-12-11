@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name=".FormTambahAnggotaActivity"
+    tools:context=".FormTambahAnggotaActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/oval"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/green_400"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/toolbartambahanggota"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/hedco"
+                        android:layout_width="match_parent"
+                        android:background="@color/accent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="0dp" />
+
+                        <ImageView
+                            android:id="@+id/fotodep"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/woman"
+                            />
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:id="@+id/nomoragt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Masukan Data Anggota"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+
+                        </LinearLayout>
+
+
+                        <ImageButton
+                            android:id="@+id/bt_toggle_detil"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:tint="@color/grey_60"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="12dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="0dp"
+                                android:id="@+id/tilKodeCabang"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Kode Cabang">
+                                <TextView
+                                    android:id="@+id/etKodeUkAgt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etKodeCabang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilNamaCabang"
+                                android:hint="Nama Cabang">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNamaCabang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/accent"
+                                app:srcCompat="@drawable/baseline_calendar_month_24" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTglPengambilanData"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Tanggal Pengambilan Data"
+                                    android:clickable="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/accent"
+                                app:srcCompat="@drawable/baseline_calendar_month_24"/>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTglBergabung"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Tanggal Bergabung"
+                                    android:clickable="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="none" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:text="Tipe Anggota"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+                            <RadioGroup
+                                android:id="@+id/rgTipeAnggota"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:text="Kelompok Baru"
+                                    android:checked="true"
+                                    android:buttonTint="@color/blue_600"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_non_regular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tambal Sulam &amp; 678"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:buttonTint="@color/blue_600"
+
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_person" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilNikKtp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/etNikKtp"
+                                    android:hint="Nik KTP"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:inputType="phone"
+                                    android:maxLines="1"
+                                    android:maxLength="16"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                         <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/app_shop_colorRed"
+                                android:id="@+id/img_check_valid_ktp"
+                                app:srcCompat="@drawable/baseline_dangerous_24" />
+                            <ImageButton
+                                android:tooltipText="Informasi KTP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/accent"
+                                android:id="@+id/info_detail_ktp"
+                                app:srcCompat="@drawable/ic_info" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_person" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilNamaLengkap"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/etNamaLengkap"
+                                    android:hint="Nama Lengkap"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:inputType="text|textCapCharacters"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/baseline_corporate_fare_24" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilInfoDesa"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/etInfoDesa"
+                                    android:hint="Desa"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:inputType="text|textCapCharacters"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/baseline_corporate_fare_24" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilKecamatan"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/etKecamatan"
+                                    android:hint="Kecamatan"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:inputType="text|textCapCharacters"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/baseline_corporate_fare_24" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilKabupaten"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/etKabupaten"
+                                    android:hint="Kabupaten"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:inputType="text|textCapCharacters"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/baseline_calendar_month_24" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilTahunKadaluarsa"
+                                android:layout_height="wrap_content"
+                                android:hint="Tahun Kadaluarsa (YYYY)"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTahunKadaluarsa"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:maxLength="4" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_person" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilNamaSuami"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Nama Suami"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:id="@+id/etNamaSuami"
+                                    android:inputType="text|textCapCharacters"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:id="@+id/tilTempatLahir"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Tempat Lahir">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTempatLahir"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text|textCapCharacters" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="Tanggal Lahir">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTanggalLahir"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilRt"
+                                android:hint="RT">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etRt"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:maxLength="4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilRw"
+                                android:hint="RW">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etRw"
+                                    android:maxLength="4"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilCenter"
+                                android:hint="Center">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etCenter"
+                                    android:maxLength="4"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilKelompok"
+                                android:hint="Kelompok">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etKelompok"
+                                    android:maxLength="4"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginBottom="20dp"
+                                android:text="Status Perkawinan"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+                            <Spinner
+                                android:id="@+id/spinnerStatusPerkawinan"
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/status_perkawinan" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_phone" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilHandphone"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:id="@+id/etHandphone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:hint="No Handphone"
+                                    android:inputType="phone"
+                                    android:maxLines="1"
+                                    android:maxLength="14"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/grey_60"
+                                app:srcCompat="@drawable/ic_person" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:id="@+id/tilNamaIbuKandung"
+                                android:layout_height="wrap_content">
+
+                                <AutoCompleteTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Nama Ibu Kandung"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:id="@+id/etNamaIbuKandung"
+                                    android:inputType="text|textCapCharacters"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/tilTmptTglOrtu"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tempat Tinggal Ortu"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etTempatTinggalOrtu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text|textCapCharacters"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp" />
+                            <RadioGroup
+                                android:id="@+id/rGTmptTglOrtu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_desa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Desa"
+                                    android:buttonTint="@color/blue_600"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:checked="true"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_kota"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kota"
+                                    android:buttonTint="@color/blue_600"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:orientation="vertical">
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:text="Apakah keluarga sudah pernah memiliki akses ke lembaga keuangan formal (pinjaman, tabungan dan asuransi)?"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+                            <CheckBox
+                                android:id="@+id/checkbox_koperasi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:buttonTint="@color/blue_600"
+                                android:text="Pinjaman dari Koperasi, BPRs/Pegadaian"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90" />
+
+                            <CheckBox
+                                android:id="@+id/checkbox_bank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:buttonTint="@color/blue_600"
+                                android:text="Pinjaman dari Bank"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90" />
+
+                            <CheckBox
+                                android:id="@+id/checkbox_tidak_ada_akses"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:buttonTint="@color/blue_600"
+                                android:text="Tidak ada akses ke lembaga keuangan formal"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90" />
+
+                            <CheckBox
+                                android:id="@+id/checkbox_rekening_tabungan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:buttonTint="@color/blue_600"
+                                android:text="Rekening tabungan di Bank/Koperasi"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90" />
+
+                            <CheckBox
+                                android:id="@+id/checkbox_asuransi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:buttonTint="@color/blue_600"
+                                android:text="Asuransi"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/tilPernahAnggota"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:orientation="vertical">>
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:text="Apakah anda pernah menjadi anggota KOMIDA ?"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+                            <RadioGroup
+                                android:id="@+id/rgPernahAnggota"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rbagt_ya"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:buttonTint="@color/blue_600"
+                                    android:text="Ya"
+                                    android:checked="true"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rbagt_tidak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:buttonTint="@color/blue_600"
+                                    android:text="Tidak"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rbagt_smartphone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:buttonTint="@color/blue_600"
+                                    android:text="Smartphone"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rbagt_tdksmartphone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:buttonTint="@color/blue_600"
+                                    android:text="Tidak Smartphone"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_90" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <Button
+                        android:id="@+id/btn_simpandataanggota"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rect_green"
+                        android:fontFamily="@font/poppins"
+                        android:text="Simpan Data"
+                        android:textColor="@android:color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

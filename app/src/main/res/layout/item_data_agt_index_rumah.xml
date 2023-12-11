@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/lyt_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:paddingLeft="20dp"
+    android:paddingRight="14dp">>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="#D71694D1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="0dp" />
+
+                    <ImageView
+                        android:id="@+id/keterangananu"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                    <View
+                        android:layout_width="@dimen/spacing_middle"
+                        android:layout_height="0dp" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Status Kepemilikan"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90" />
+                        <TextView
+                            android:id="@+id/tv_status_milik"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="?"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:background="#D7DEEDDA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="0dp" />
+
+                        <ImageView
+                            android:id="@+id/fotodepdinding"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/dindingicon" />
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_index_dinding"
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="DINDING"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="POIN"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tv_poin_dinding"
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="?"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_90"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/spacing_middle" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_xmlarge"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="0dp" />
+
+                            <TextView
+                                android:id="@+id/tv_kondisi_dinding"
+                                android:layout_width="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:layout_height="wrap_content"
+                                android:text="?"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                                android:textColor="@color/black" />
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="0dp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/spacing_middle" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            <ImageButton
+
+                android:layout_width="@dimen/spacing_xxxlarge"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/transparent"
+
+                app:srcCompat="@drawable/ic_more_horiz"
+                app:tint="@color/grey_40" />
+            <LinearLayout
+                android:background="#D7DAE9ED"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="0dp" />
+
+                    <ImageView
+                        android:id="@+id/fotodep"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:background="@drawable/atapicon" />
+                    <View
+                        android:layout_width="@dimen/spacing_middle"
+                        android:layout_height="0dp" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_index_atap"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ATAP"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="POIN"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tv_poin_atap"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="?"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_middle" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_xmlarge"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="0dp" />
+
+                        <TextView
+                            android:id="@+id/tv_kondisi_atap"
+                            android:layout_width="wrap_content"
+
+                            android:fontFamily="@font/poppins"
+                            android:layout_height="wrap_content"
+                            android:text="?"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_middle" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+
+                android:layout_width="@dimen/spacing_xxxlarge"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/transparent"
+
+                app:srcCompat="@drawable/ic_more_horiz"
+                app:tint="@color/grey_40" />
+            <LinearLayout
+                android:background="#E1F5FE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="0dp" />
+
+                    <ImageView
+                        android:id="@+id/fotodeplantai"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:background="@drawable/lantaiicon" />
+                    <View
+                        android:layout_width="@dimen/spacing_middle"
+                        android:layout_height="0dp" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_index_lantai"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="LANTAI"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="POIN"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tv_poin_lantai"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="?"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_middle" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_xmlarge"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="0dp" />
+
+                        <TextView
+                            android:id="@+id/tv_kondisi_lantai"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:layout_height="wrap_content"
+                            android:text="?"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="0dp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/spacing_middle" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

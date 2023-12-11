@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/spacing_xsmall"
+        android:layout_marginRight="@dimen/spacing_xsmall"
+
+        android:clipToPadding="true"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/laycen"
+            android:background="#D7EDE7DA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/hedco"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center|fill_horizontal"
+
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:id="@+id/tv_no_urutan"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_flag_view"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_comp_id"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_question_id"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_tipe_pertanyaan"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_status_pertanyaan"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_question_desc"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pertanyaan PPI"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_poin_answer"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15dp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_id_jawaban"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15dp"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_id_soal"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15dp"
+                        android:visibility="gone"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_total_score_poin"
+                        android:visibility="gone"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="15dp"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_answer_ppi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/lin_pilihan_ganda"
+                    android:visibility="visible"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15dp"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

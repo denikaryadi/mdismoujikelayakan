@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFFDC"
+    tools:context=".SplashScreenActivity">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_above="@+id/footerchat"
+        android:layout_centerHorizontal="true"
+        android:minHeight="50dp"
+        android:minWidth="200dp" />
+    <TextView
+        android:id="@+id/footerchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="©Koperasi Mitra Dhuafa"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:paddingBottom="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerchat"
+        android:text="UJI KELAYAKAN"
+        android:textColor="#1E6F5C"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:paddingBottom="150dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerchat"
+        android:text="MDIS MOBILE"
+        android:textColor="#1E6F5C"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:paddingBottom="200dp"/>
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerchat"
+        android:text="Version 1.1.0"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:paddingBottom="120dp"/>
+
+    <ImageView
+        android:layout_width="251dp"
+        android:layout_height="287dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:paddingRight="-15dp"
+        android:src="@drawable/logo_mdismo_round" />
+
+</RelativeLayout>

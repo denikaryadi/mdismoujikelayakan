@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/spacing_xsmall"
+        android:layout_marginRight="@dimen/spacing_xsmall"
+
+        android:clipToPadding="true"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/laycen"
+            android:background="@color/amber_50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/hedco"
+                android:layout_width="match_parent"
+
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+                <ImageView
+                    android:id="@+id/fotodep"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/coin_dash" />
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="119dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_product_name_saving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins"
+                            android:text="Nama Produk"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tv_product_id_saving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins"
+                            android:text="Produk ID"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_90"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_deposit_saving"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"
+                            android:text="Deposit"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/app_shop_colorAccentDark"
+                            android:textStyle="italic" />
+                        <TextView
+                            android:id="@+id/tv_flag_saving"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            />
+                        <TextView
+                            android:id="@+id/tv_kode_ukagt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            />
+                        <TextView
+                            android:id="@+id/tv_kode_ukprodsav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageButton
+
+        android:layout_width="@dimen/spacing_xxxlarge"
+        android:layout_height="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+
+        app:srcCompat="@drawable/ic_more_horiz"
+        app:tint="@color/grey_40" />
+
+</LinearLayout>

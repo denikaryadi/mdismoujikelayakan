@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/lyt_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="PENDAPATAN"
+
+                    android:textColor="@color/grey_40" />
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    app:srcCompat="@drawable/cash_in" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_tidak_tetap" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_kode_uk_pen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:id="@+id/tv_kode_uk_agt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Suami Tetap"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pendapatan_suami_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_tidak_tetap" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Suami Tidak Tetap"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pendapatan_suami_tidak_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/blue_100"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Suami Per Bulan (a)"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_pendapatan_suami_per_bulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_tidak_tetap" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Istri Tetap"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pendapatan_istri_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_tidak_tetap" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Istri Tidak Tetap"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pendapatan_istri_tidak_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/blue_100"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Istri Per Bulan (b)"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_pendapatan_istri_per_bulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_tidak_tetap" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Lainnya Tetap"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pendapatan_lainnya_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_tidak_tetap" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Lainnya Tidak Tetap"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pendapatan_lainnya_tidak_tetap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/blue_100"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendapatan Lainnya Per Bulan (c)"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_pendapatan_lainnya_per_bulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/blue_400"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Pendapatan Semua \nPer Bulan v = (a+b+c)"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_pendapatan_per_bulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <ImageButton
+
+        android:layout_width="@dimen/spacing_xxxlarge"
+        android:layout_height="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+
+        app:srcCompat="@drawable/ic_more_horiz"
+        app:tint="@color/grey_40" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="PENGELUARAN"
+
+                    android:textColor="@color/grey_40" />
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    app:srcCompat="@drawable/cash_out"  />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_semua" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengeluaran Rumah Tangga"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pengeluaran_rt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    android:src="@drawable/pendapatan_semua" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengeluaran Lainnya"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pengeluaran_lainnya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:background="@color/amber_200"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengeluaran per Bulan (d)"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_pengeluaran_per_bulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_middle" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+
+        android:layout_width="@dimen/spacing_xxxlarge"
+        android:layout_height="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+
+        app:srcCompat="@drawable/ic_more_horiz"
+        app:tint="@color/grey_40" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="PENDAPATAN BERSIH = (v-d)"
+
+                    android:textColor="@color/grey_40" />
+
+                <ImageView
+                    android:layout_width="@dimen/spacing_mxlarge"
+                    android:layout_height="@dimen/spacing_mxlarge"
+                    app:srcCompat="@drawable/cash_balance" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/app_shop_colorPrimary" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/app_shop_colorAccentDark"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Pendapatan Bersih\n (tot = v-c)"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_total_pendapatan_bersih"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/TextAppearance.Medium.Bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/grey_80"
+                        android:fontFamily="@font/poppins" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageButton
+
+                android:layout_width="@dimen/spacing_xxxlarge"
+                android:layout_height="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/transparent"
+
+                app:srcCompat="@drawable/ic_more_horiz"
+                app:tint="@color/grey_40" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

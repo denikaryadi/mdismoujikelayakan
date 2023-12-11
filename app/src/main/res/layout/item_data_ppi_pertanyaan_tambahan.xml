@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/spacing_xsmall"
+        android:layout_marginRight="@dimen/spacing_xsmall"
+
+        android:clipToPadding="true"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/laycen"
+            android:background="#D7EDE7DA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:background="@color/amber_400"
+                android:padding="5dp"
+                android:id="@+id/tv_tambahan_pertanyaan"
+                android:fontFamily="@font/poppins"
+                android:textSize="14dp"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tambahan Keterangan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/grey_90"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/hedco"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center|fill_horizontal"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:id="@+id/tv_flag_view"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tv_urutan"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tipe_pertanyaan"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_status_pertanyaan"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/tv_pertanyaan"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pertanyaan PPI"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_answer_ppi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/lin_pilihan_ganda"
+                    android:visibility="visible"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="15dp"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/grey_90"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_keluarga"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/v_hedco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_200"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="0dp" />
+
+                    <ImageView
+                        android:id="@+id/v_fotodep"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_peoples_outline" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_middle"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/v_tv_kode_uk_agt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Informasi Keluarga Anggota"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <ImageButton
+                        android:layout_width="?android:attr/actionBarSize"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Perempuan"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Perempuan Sekolah"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90" />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPerempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/v_jumlah_pr"
+                            android:layout_width="match_parent"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:maxLength="2"
+                            android:inputType="number" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/v_jml_pr_sekolah"
+                            android:textSize="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+
+                            android:maxLength="2"
+                            android:inputType="number" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Laki-Laki"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Laki-Laki Sekolah"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLakiLaki"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                            android:id="@+id/v_jml_lk"
+                            android:textSize="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+
+                            android:maxLength="2"
+                            android:inputType="number" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                            android:id="@+id/v_jml_lk_sekolah"
+                            android:textSize="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+
+                            android:maxLength="2"
+                            android:inputType="number" />
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Total Anak"
+                        android:textSize="12dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="Total Anak Sekolah"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:textAlignment="center"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90" />
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/v_total_pr_lk"
+                            android:textSize="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:text="0"
+                            android:maxLength="2"
+                            android:inputType="number"
+                            android:focusable="false" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/v_total_pr_lk_sekolah"
+                            android:textSize="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:text="0"
+                            android:maxLength="2"
+                            android:textAlignment="center"
+                            android:focusable="false" />
+
+                    </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

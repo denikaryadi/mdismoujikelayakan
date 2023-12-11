@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_shop_colorPrimary">#89C443</color>
+    <color name="app_shop_colorPrimaryDark">#558B2F</color>
+    <color name="app_shop_colorPrimaryLight">#9ECC66</color>
+
+    <color name="app_shop_colorAccent">#89C443</color>
+    <color name="app_shop_colorAccentDark">#7AB439</color>
+    <color name="app_shop_colorAccentLight">#9ECC66</color>
+    <color name="app_shop_colorRed">#F44336</color>
+
+    <color name="app_shop_grey_hard">#96989A</color>
+    <color name="app_shop_grey_medium">#BDBFC1</color>
+    <color name="app_shop_grey_soft">#F5F5F5</color>
+
+    <color name="app_shop_grey_bg">#E6E6E6</color>
+    <color name="app_shop_grey_text">#222D31</color>
+    <color name="app_shop_tab_indicator_color">#FFFFFF</color>
+
+</resources>

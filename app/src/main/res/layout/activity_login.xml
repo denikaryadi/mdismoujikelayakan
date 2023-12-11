@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFFDC"
+
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/logo"
+        />
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_xxlarge">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNikHris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNikHris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:hint="NIK HRIS"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_300"
+                android:theme="@style/EditText.Grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_medium" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:hint="PASSWORD"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:maxLines="1"
+
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_300"
+                android:theme="@style/EditText.Grey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_large" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/login"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:background="@drawable/btn_rounded_green_300"
+            android:text="LOGIN MDISMO"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_medium" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

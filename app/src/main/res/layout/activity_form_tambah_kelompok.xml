@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name=".FormTambahKelompok"
+    tools:context=".FormTambahKelompok"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/oval"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/green_400"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbartambahkelompok"
+
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/hedco"
+                        android:layout_width="match_parent"
+                        android:background="@color/accent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="0dp" />
+
+                        <ImageView
+                            android:id="@+id/fotodep"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/woman"
+                            />
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:id="@+id/nomoragt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Masukan Data Kelompok"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+
+                        </LinearLayout>
+
+
+                        <ImageButton
+                            android:id="@+id/bt_toggle_detil"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:tint="@color/grey_60"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="12dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:id="@+id/tilKodeCabang"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+
+                                android:hint="Kode Cabang">
+                                <TextView
+                                    android:id="@+id/tvKodeUkLwkDtl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"
+                                    />
+                                <TextView
+                                    android:id="@+id/tvNoTrxUkLwkDtl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/etKodeUkAgt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etKodeCabang"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:id="@+id/tilNamaCabang"
+                                android:hint="Nama Cabang">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNamaCabang"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:inputType="none" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:layout_width="@dimen/spacing_mxlarge"
+                                android:layout_height="@dimen/spacing_mxlarge"
+                                android:layout_marginTop="@dimen/spacing_mlarge"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/accent"
+                                app:srcCompat="@drawable/baseline_calendar_month_24" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTglInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Tanggal Input Data"
+                                    android:clickable="true"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilCenter"
+                                app:boxStrokeWidth="2dp"
+                                android:padding="10dp"
+                                android:hint="Center">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etCenter"
+                                    android:maxLength="4"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/green_50"
+                                app:boxStrokeWidth="2dp"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilNamaCenter"
+                                android:hint="Nama Center">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNamaCenter"
+                                    app:boxBackgroundMode="filled"
+                                    app:boxStrokeColor="@color/green_50"
+                                    app:boxStrokeWidth="2dp"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text|textCapCharacters" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+
+                                app:boxStrokeWidth="2dp"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilKelompok"
+                                android:hint="Kelompok"
+                                android:padding="10dp"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etKelompok"
+                                    android:maxLength="4"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="phone" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+
+                                app:boxStrokeWidth="2dp"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/tilNamaKelompok"
+                                android:hint="Nama Kelompok">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etNamaKelompok"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text|textCapCharacters" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:fontFamily="@font/poppins"
+
+                                app:boxStrokeWidth="2dp"
+                                android:textSize="14dp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:id="@+id/tilTempatCenter"
+                                android:hint="Tempat"
+                                android:padding="10dp"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etTempatCenter"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text|textCapCharacters" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:fontFamily="@font/poppins"
+
+                                app:boxStrokeWidth="2dp"
+                                android:textSize="14dp"
+                                android:hint="Waktu"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageButton
+                                        android:id="@+id/btnShowTimePicker"
+                                        android:layout_width="@dimen/spacing_mxlarge"
+                                        android:layout_height="@dimen/spacing_mxlarge"
+                                        android:layout_marginTop="@dimen/spacing_mlarge"
+                                        android:background="@android:color/transparent"
+                                        android:tint="@color/accent"
+                                        android:src="@drawable/baseline_access_alarms_24"
+                                        android:onClick="showTimePickerDialog" />
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tilWaktuMinggon"
+                                        android:fontFamily="@font/poppins"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/etWaktuLwk"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Waktu Lwk"
+                                            android:clickable="true"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins"
+                                            android:textSize="14dp"
+                                            android:focusable="false"
+                                            android:focusableInTouchMode="false"
+                                            android:inputType="text" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:text="Jenis Kategori"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+                            <RadioGroup
+                                android:id="@+id/rgKategoriKelompok"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:orientation="vertical"
+                                android:background="@color/app_shop_grey_soft"
+
+                                >
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_kelompokbarucenterbaru"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:text="Kelompok Baru Center Baru"
+                                    android:checked="true"
+                                    android:buttonTint="@color/blue_600"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                    />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_mlarge"
+                                    android:layout_height="0dp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rb_kelompokbarucenterlama"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kelompok Baru Center Lama"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:buttonTint="@color/blue_600"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:text="Pilih Ketua Center"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilKetuaCenter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/src_ketua_center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:hint="Klik Tanda Panah Samping..."
+                                    android:inputType="none" />
+
+                                <Button
+                                    android:id="@+id/openDialogKetuaCenter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_arrow_drop"
+                                    android:backgroundTint="#000000" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:text="Pilih Wakil Ketua Center"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilWakilKetuaCenter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/src_wakil_ketua_center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14dp"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:hint="Klik Tanda Panah Samping..."
+                                    android:inputType="none" />
+
+                                <Button
+                                    android:id="@+id/openDialogButtonWakilKetuaCenter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_arrow_drop"
+                                    android:backgroundTint="#000000" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="14dp"
+                                android:text="Pilih Anggota"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/grey_90" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPilihAnggota"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <com.pchmn.materialchips.ChipsInput
+                                    android:id="@+id/chips_input"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:chip_deletable="true"
+                                    app:maxRows="5"
+                                    android:inputType="none"
+                                    app:showChipDetailed="true" />
+
+                                <ImageButton
+                                    android:id="@+id/contacts"
+                                    android:layout_width="?attr/actionBarSize"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:background="?attr/selectableItemBackgroundBorderless"
+                                    android:tint="@color/accent"
+                                    app:srcCompat="@drawable/ic_contacts" />
+
+                            </LinearLayout>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_simpandatakelompok"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:background="@drawable/btn_rect_green"
+                        android:fontFamily="@font/poppins"
+                        android:text="Simpan Data"
+                        android:textColor="@android:color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

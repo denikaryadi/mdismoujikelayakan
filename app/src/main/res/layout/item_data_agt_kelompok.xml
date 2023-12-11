@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/spacing_xsmall"
+        android:layout_marginRight="@dimen/spacing_xsmall"
+
+        android:clipToPadding="true"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/laycen"
+            android:background="#D7EDE7DA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/hedco"
+                android:layout_width="match_parent"
+
+                android:layout_height="70dp"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+                <ImageView
+                    android:id="@+id/fotodep"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:background="@drawable/women" />
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/info_nama_agt_kelompok"
+                        android:fontFamily="@font/poppins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kode Kelompok"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90"
+                        android:textStyle="bold" />
+
+
+
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/bt_toggle_passenger"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/grey_60"
+                    app:srcCompat="@drawable/ic_expand_arrow" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lyt_expand_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:fontFamily="@font/poppins"
+                        android:text="Tanggal Input"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/tanggal_input_kelompok"
+                        android:layout_width="wrap_content"
+
+                        android:fontFamily="@font/poppins"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:fontFamily="@font/poppins"
+                        android:text="Center"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:id="@+id/kode_nama_center"
+                        android:layout_width="wrap_content"
+
+                        android:fontFamily="@font/poppins"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kelompok"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/kode_nama_kelompok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tempat dan Waktu Lwk"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tempat_waktu_lwk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kategori Lwk"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/kategori_lwk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ketua Center"
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/ketuacenter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_xmlarge"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Wakil Ketua Center"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/wakil_ketua_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+
+                        android:fontFamily="@font/poppins"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="@dimen/spacing_large"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
